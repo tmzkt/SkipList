@@ -5,14 +5,10 @@ SKIPLIST
   
   This is a simple implementation in Java.
   
-AUTHOR
+ORIGINAL AUTHOR
 
   Simon David Pratt
-
-CONTACT
-
-  me@SimonDavidPratt.com
-  http://SimonDavidPratt.com
+  forked in this repository to expand upon original implementation. 
 
 LICENSE
 

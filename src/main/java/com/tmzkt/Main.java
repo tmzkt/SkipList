@@ -9,8 +9,6 @@ public class Main {
         skipList.add(1);
         skipList.add(6);
 
-        for (int i : skipList) {
-            System.out.println(i);
-        }
+        skipList.forEach(System.out::println);
     }
 }

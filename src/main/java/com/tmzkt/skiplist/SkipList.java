@@ -1,4 +1,4 @@
-package com.tmzkt;
+package com.tmzkt.skiplist;
 
 /******************************************************************************
  * Skiplist                                                                    *

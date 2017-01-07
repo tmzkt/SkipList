@@ -116,7 +116,7 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
      ******************************************************************************/
 
     public static void main(String[] args) {
-        SkipList testList = new SkipList<Integer>();
+        SkipList<Integer> testList = new SkipList<>();
         System.out.println(testList);
         testList.add(4);
         System.out.println(testList);
@@ -124,14 +124,15 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
         System.out.println(testList);
         testList.add(2);
         System.out.println(testList);
-        testList = new SkipList<String>();
-        System.out.println(testList);
-        testList.add("hello");
-        System.out.println(testList);
-        testList.add("beautiful");
-        System.out.println(testList);
-        testList.add("world");
-        System.out.println(testList);
+
+        SkipList<String> testList2 = new SkipList<>();
+        System.out.println(testList2);
+        testList2.add("hello");
+        System.out.println(testList2);
+        testList2.add("beautiful");
+        System.out.println(testList2);
+        testList2.add("world");
+        System.out.println(testList2);
     }
 
     public String toString() {

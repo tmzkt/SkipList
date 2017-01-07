@@ -26,6 +26,7 @@ public class SkipListNode<E> {
         return nextNodes.size() - 1;
     }
 
+    @Override
     public String toString() {
         return "SLN: " + value;
     }

@@ -18,15 +18,18 @@ public class SkipListIterator<E extends Comparable<E>> implements Iterator<E> {
         this.current = list.getHead();
     }
 
+    @Override
     public boolean hasNext() {
         return current.nextNodes.get(0) != null;
     }
 
+    @Override
     public E next() {
         current = current.nextNodes.get(0);
         return current.getValue();
     }
 
+    @Override
     public void remove() {
         throw new UnsupportedOperationException();
     }

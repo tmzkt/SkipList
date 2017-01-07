@@ -31,6 +31,7 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
 
     // Adds e to the skiplist.
     // Returns false if already in skiplist, true otherwise.
+    @Override
     public boolean add(E e) {
         if (contains(e)) return false;
         size++;
@@ -79,10 +80,12 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
         return current;
     }
 
+    @Override
     public int size() {
         return size;
     }
 
+    @Override
     public boolean contains(Object o) {
         E e = (E) o;
         SkipListNode node = find(e);
@@ -91,6 +94,7 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
                 equalTo((E) node.getValue(), e);
     }
 
+    @Override
     public Iterator<E> iterator() {
         return new SkipListIterator(this);
     }
@@ -135,6 +139,7 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
         System.out.println(testList2);
     }
 
+    @Override
     public String toString() {
         String s = "src.SkipList: ";
         for (Object o : this)

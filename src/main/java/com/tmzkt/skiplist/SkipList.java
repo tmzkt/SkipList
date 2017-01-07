@@ -10,7 +10,7 @@ package com.tmzkt.skiplist;
 import java.util.*;
 
 public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
-    private SkipListNode<E> head;
+    private final SkipListNode<E> head;
     private int maxLevel;
     private int size;
 
@@ -99,6 +99,14 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
         return new SkipListIterator(this);
     }
 
+    @Override
+    public String toString() {
+        String s = "src.SkipList: ";
+        for (Object o : this)
+            s += o + ", ";
+        return s.substring(0, s.length() - 2);
+    }
+
     /******************************************************************************
      * Utility Functions                                                           *
      ******************************************************************************/
@@ -113,37 +121,5 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
 
     private boolean greaterThan(E a, E b) {
         return a.compareTo(b) > 0;
-    }
-
-    /******************************************************************************
-     * Testing                                                                     *
-     ******************************************************************************/
-
-    public static void main(String[] args) {
-        SkipList<Integer> testList = new SkipList<>();
-        System.out.println(testList);
-        testList.add(4);
-        System.out.println(testList);
-        testList.add(1);
-        System.out.println(testList);
-        testList.add(2);
-        System.out.println(testList);
-
-        SkipList<String> testList2 = new SkipList<>();
-        System.out.println(testList2);
-        testList2.add("hello");
-        System.out.println(testList2);
-        testList2.add("beautiful");
-        System.out.println(testList2);
-        testList2.add("world");
-        System.out.println(testList2);
-    }
-
-    @Override
-    public String toString() {
-        String s = "src.SkipList: ";
-        for (Object o : this)
-            s += o + ", ";
-        return s.substring(0, s.length() - 2);
     }
 }

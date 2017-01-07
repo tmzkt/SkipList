@@ -4,11 +4,22 @@ import com.tmzkt.skiplist.SkipList;
 
 public class Main {
     public static void main(String[] args) {
-        SkipList<Integer> skipList = new SkipList<>();
-        skipList.add(4);
-        skipList.add(1);
-        skipList.add(6);
+        SkipList<Integer> testList = new SkipList<>();
+        System.out.println(testList);
+        testList.add(4);
+        System.out.println(testList);
+        testList.add(1);
+        System.out.println(testList);
+        testList.add(2);
+        System.out.println(testList);
 
-        skipList.forEach(System.out::println);
+        SkipList<String> testList2 = new SkipList<>();
+        System.out.println(testList2);
+        testList2.add("hello");
+        System.out.println(testList2);
+        testList2.add("beautiful");
+        System.out.println(testList2);
+        testList2.add("world");
+        System.out.println(testList2);
     }
 }

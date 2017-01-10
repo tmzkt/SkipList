@@ -10,8 +10,8 @@ package com.tmzkt.skiplist;
 import java.util.*;
 
 public class SkipListIterator<E extends Comparable<E>> implements Iterator<E> {
-    SkipList<E> list;
-    SkipListNode<E> current;
+    private SkipList<E> list;
+    private SkipListNode<E> current;
 
     public SkipListIterator(SkipList<E> list) {
         this.list = list;

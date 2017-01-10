@@ -20,12 +20,12 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
         size = 0;
         maxLevel = 0;
         // a src.SkipListNode with value null marks the beginning
-        head = new SkipListNode<E>(null);
+        head = new SkipListNode<>(null);
         // null marks the end
         head.nextNodes.add(null);
     }
 
-    public SkipListNode getHead() {
+    public SkipListNode<E> getHead() {
         return head;
     }
 
@@ -43,8 +43,8 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
             head.nextNodes.add(null);
             maxLevel++;
         }
-        SkipListNode newNode = new SkipListNode<E>(e);
-        SkipListNode current = head;
+        SkipListNode<E> newNode = new SkipListNode<E>(e);
+        SkipListNode<E> current = head;
         do {
             current = findNext(e, current, level);
             newNode.nextNodes.add(0, current.nextNodes.get(level));
@@ -96,7 +96,7 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return new SkipListIterator(this);
+        return new SkipListIterator<E>(this);
     }
 
     @Override

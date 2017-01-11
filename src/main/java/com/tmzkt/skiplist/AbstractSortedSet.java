@@ -1,14 +1,5 @@
 package com.tmzkt.skiplist;
 
-/******************************************************************************
- * src.AbstractSortedSet                                                           *
- *                                                                             *
- * Extends AbstractSet and implements SortedSet, and contains stub methods     *
- *                                                                             *
- * View README file for information about this project.                        *
- * View LICENSE file for license information.                                  *
- ******************************************************************************/
-
 import java.util.*;
 
 abstract class AbstractSortedSet<E> extends AbstractSet<E> implements SortedSet<E> {

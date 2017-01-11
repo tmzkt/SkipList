@@ -1,12 +1,5 @@
 package com.tmzkt.skiplist;
 
-/******************************************************************************
- * src.SkipListIterator                                                            *
- *                                                                             *
- * View README file for information about this project.                        *
- * View LICENSE file for license information.                                  *
- ******************************************************************************/
-
 import java.util.*;
 
 public class SkipListIterator<E extends Comparable<E>> implements Iterator<E> {

@@ -1,12 +1,5 @@
 package com.tmzkt.skiplist;
 
-/******************************************************************************
- * src.SkipListNode                                                                *
- *                                                                             *
- * View README file for information about this project.                        *
- * View LICENSE file for license information.                                  *
- ******************************************************************************/
-
 import java.util.*;
 
 public class SkipListNode<E> {

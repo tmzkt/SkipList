@@ -1,6 +1,6 @@
 SKIPLIST
 
-  A probablistic alternative to balanced trees, introduced by William
+  A probabilistic alternative to balanced trees, introduced by William
   Pugh in his 1990 paper.
   
   This is a simple implementation in Java.

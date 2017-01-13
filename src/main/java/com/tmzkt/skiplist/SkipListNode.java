@@ -3,7 +3,7 @@ package com.tmzkt.skiplist;
 import java.util.*;
 
 public class SkipListNode<E> {
-    private E value;
+    private final E value;
     public List<SkipListNode<E>> nextNodes;
 
     public SkipListNode(E value) {

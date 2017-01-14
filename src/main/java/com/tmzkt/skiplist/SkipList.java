@@ -26,12 +26,15 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
     // Returns false if already in skiplist, true otherwise.
     @Override
     public boolean add(E e) {
-        if (contains(e)) return false;
+        if (contains(e)) {
+            return false;
+        }
         size++;
         // random number from 0 to maxLevel+1 (inclusive)
         int level = 0;
-        while (Math.random() < PROBABILITY)
+        while (Math.random() < PROBABILITY) {
             level++;
+        }
         while (level > maxLevel) { // should only happen once
             head.nextNodes.add(null);
             maxLevel++;
@@ -65,8 +68,9 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
         SkipListNode next = (SkipListNode) current.nextNodes.get(level);
         while (next != null) {
             E value = (E) next.getValue();
-            if (lessThan(e, value)) // e < value
+            if (lessThan(e, value)) { // e < value
                 break;
+            }
             current = next;
             next = (SkipListNode) current.nextNodes.get(level);
         }
@@ -95,8 +99,9 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
     @Override
     public String toString() {
         String s = "src.SkipList: ";
-        for (Object o : this)
+        for (Object o : this) {
             s += o + ", ";
+        }
         return s.substring(0, s.length() - 2);
     }
 

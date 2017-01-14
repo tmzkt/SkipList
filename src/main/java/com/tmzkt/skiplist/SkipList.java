@@ -1,6 +1,7 @@
 package com.tmzkt.skiplist;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
     private final SkipListNode<E> head;
@@ -98,11 +99,7 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
 
     @Override
     public String toString() {
-        String s = "src.SkipList: ";
-        for (Object o : this) {
-            s += o + ", ";
-        }
-        return s.substring(0, s.length() - 2);
+        return "src.SkipList: " + this.stream().map(Object::toString).collect(Collectors.joining(", "));
     }
 
     /******************************************************************************

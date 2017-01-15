@@ -21,6 +21,8 @@ public class SkipListNode<E> {
 
     @Override
     public String toString() {
-        return "SLN: " + value;
+        return "SkipListNode{" +
+                "value=" + value +
+                '}';
     }
 }

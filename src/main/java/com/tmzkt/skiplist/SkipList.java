@@ -99,7 +99,9 @@ public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
 
     @Override
     public String toString() {
-        return "src.SkipList: " + this.stream().map(Object::toString).collect(Collectors.joining(", "));
+        return "SkipList{" +
+                "list=" + this.stream().map(Object::toString).collect(Collectors.joining(", "))
+                + '}';
     }
 
     /******************************************************************************

@@ -4,11 +4,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class SkipList<E extends Comparable<E>> extends AbstractSortedSet<E> {
+    private static final double PROBABILITY = 0.5;
+
     private final SkipListNode<E> head;
     private int maxLevel;
     private int size;
-
-    private static final double PROBABILITY = 0.5;
 
     public SkipList() {
         size = 0;

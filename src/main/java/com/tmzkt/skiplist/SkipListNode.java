@@ -8,7 +8,7 @@ public class SkipListNode<E> {
 
     public SkipListNode(E value) {
         this.value = value;
-        nextNodes = new ArrayList<>();
+        this.nextNodes = new ArrayList<>();
     }
 
     public E getValue() {
